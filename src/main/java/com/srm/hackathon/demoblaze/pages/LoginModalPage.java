@@ -171,4 +171,26 @@ public class LoginModalPage extends BasePage {
             return false;
         }
     }
+    
+ // 🔥 NEW METHOD (for CartTest)
+    public String registerUserWithUsername(String username, String password) {
+
+        clickSignUp();
+        waitForSignUpModal();
+
+        enterUsername(username);
+        enterPassword(password);
+
+        clickRegister();
+
+        String alertText = getAlertText();
+        waitForAlertAndAccept();
+
+        return alertText;
+    }
+    
+ // 🔥 Wait until user appears in navbar (after login)
+    public void waitForUserToBeVisible() {
+        waitForVisibility(loggedInUser);
+    }
 }

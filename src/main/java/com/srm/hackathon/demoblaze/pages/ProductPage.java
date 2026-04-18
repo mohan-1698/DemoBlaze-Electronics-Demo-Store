@@ -16,9 +16,9 @@ public class ProductPage extends BasePage {
 
     // ===== PRODUCT LIST =====
     private By productCards = By.cssSelector("#tbodyid .card");
+    private By productNames = By.cssSelector("#tbodyid .hrefch");
 
     // ===== PRODUCT DETAILS =====
-    private By productNames = By.cssSelector(".hrefch");
     private By productPrice = By.cssSelector(".price-container");
     private By productDescription = By.cssSelector("#more-information");
 
@@ -44,15 +44,24 @@ public class ProductPage extends BasePage {
 
     // ================= COMMON METHODS =================
 
+    // 🔥 MOST IMPORTANT FIX (handles dynamic loading)
     public void waitForProductsToLoad() {
-        waitForVisibility(productCards);
+        wait.until(driver -> driver.findElements(productCards).size() > 0);
     }
 
     public int getProductCount() {
-        List<WebElement> products = driver.findElements(productCards);
-        return products.size();
+        return driver.findElements(productNames).size();
     }
 
+    // 🔥 ROBUST dynamic product selection
+    public void selectProduct(String productName) {
+        By product = By.xpath(
+            "//a[@class='hrefch' and normalize-space()='" + productName + "']"
+        );
+        click(product);
+    }
+
+    // Optional helper
     public void clickFirstProduct() {
         List<WebElement> products = driver.findElements(productNames);
         products.get(0).click();

@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.srm.hackathon.demoblaze.tests.AuthTest">
+      <class name="com.srm.hackathon.demoblaze.tests.CartTest">
         <methods>
-          <include name="verifyLoginFailure"/>
+          <include name="verifyDeleteProduct"/>
+          <include name="verifyAddTwoProducts"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="verifyAddSingleProduct"/>
         </methods>
-      </class> <!-- com.srm.hackathon.demoblaze.tests.AuthTest -->
+      </class> <!-- com.srm.hackathon.demoblaze.tests.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
