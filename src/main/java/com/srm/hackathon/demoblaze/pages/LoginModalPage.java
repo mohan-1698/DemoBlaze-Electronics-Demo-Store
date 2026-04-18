@@ -1,8 +1,10 @@
 package com.srm.hackathon.demoblaze.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.srm.hackathon.demoblaze.base.BasePage;
+import com.srm.hackathon.demoblaze.utils.ScreenshotUtils;
 
 public class LoginModalPage extends BasePage {
 
@@ -101,7 +103,7 @@ public class LoginModalPage extends BasePage {
         waitForVisibility(loggedInUser);
     }
 
-    // Login failure (alert)
+ // Login failure (alert)
     public String loginAndGetError(String username, String password) {
 
         clickLogin();
@@ -112,8 +114,25 @@ public class LoginModalPage extends BasePage {
 
         clickLoginButton();
 
-        String alertText = getAlertText();
-        waitForAlertAndAccept();
+        // 📸 TAKE SCREENSHOT IMMEDIATELY AFTER LOGIN CLICK
+        String screenshotPath = ScreenshotUtils.captureScreenshot("LoginFailure");
+
+        System.out.println("[INFO] Invalid login attempted");
+        System.out.println("[INFO] Screenshot captured: " + screenshotPath);
+        System.out.println("[INFO] Alert is native JS and may not appear in screenshot");
+
+        String alertText = "";
+
+        try {
+            // Optional alert handling
+            wait.until(ExpectedConditions.alertIsPresent());
+
+            alertText = driver.switchTo().alert().getText();
+            driver.switchTo().alert().accept();
+
+        } catch (Exception e) {
+            System.out.println("[INFO] No alert appeared after login attempt");
+        }
 
         return alertText;
     }
