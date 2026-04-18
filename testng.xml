@@ -1,25 +1,44 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="DemoBlaze Suite" parallel="methods" thread-count="3">
+<suite name="DemoBlaze Suite" parallel="tests" thread-count="3">
 
-<listeners>
-    <listener class-name="com.srm.hackathon.demoblaze.listeners.TestListener"/>
-</listeners>
+    <listeners>
+        <listener class-name="com.srm.hackathon.demoblaze.listeners.TestListener"/>
+    </listeners>
 
+    <!-- 🔐 AUTH MODULE -->
     <test name="Auth Tests">
-
         <classes>
             <class name="com.srm.hackathon.demoblaze.tests.AuthTest"/>
         </classes>
-
     </test>
-    
-    <test name="Product Tests">
 
+    <!-- 📦 PRODUCT MODULE -->
+    <test name="Product Tests">
         <classes>
             <class name="com.srm.hackathon.demoblaze.tests.ProductTest"/>
         </classes>
+    </test>
 
+    <!-- 🛒 CART MODULE -->
+    <test name="Cart Tests">
+        <classes>
+            <class name="com.srm.hackathon.demoblaze.tests.CartTest"/>
+        </classes>
+    </test>
+
+    <!-- 🧾 ORDER MODULE -->
+    <test name="Order Tests">
+        <classes>
+            <class name="com.srm.hackathon.demoblaze.tests.OrderTest"/>
+        </classes>
+    </test>
+
+    <!-- 🧪 FORM VALIDATION MODULE -->
+    <test name="Form Validation Tests">
+        <classes>
+            <class name="com.srm.hackathon.demoblaze.tests.FormValidationTest"/>
+        </classes>
     </test>
 
 </suite>

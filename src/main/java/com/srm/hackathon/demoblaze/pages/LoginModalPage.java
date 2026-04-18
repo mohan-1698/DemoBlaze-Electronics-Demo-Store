@@ -48,6 +48,7 @@ public class LoginModalPage extends BasePage {
         click(signUpButton);
     }
 
+    // 🔥 Signup with random username
     public String registerUser(String baseUsername, String password) {
 
         clickSignUp();
@@ -56,6 +57,23 @@ public class LoginModalPage extends BasePage {
         String uniqueUsername = baseUsername + System.currentTimeMillis();
 
         enterUsername(uniqueUsername);
+        enterPassword(password);
+
+        clickRegister();
+
+        String alertText = getAlertText();
+        waitForAlertAndAccept();
+
+        return alertText;
+    }
+
+    // 🔥 Signup with specific username (used in tests)
+    public String registerUserWithUsername(String username, String password) {
+
+        clickSignUp();
+        waitForSignUpModal();
+
+        enterUsername(username);
         enterPassword(password);
 
         clickRegister();
@@ -88,7 +106,7 @@ public class LoginModalPage extends BasePage {
         click(loginButton);
     }
 
-    // Successful login
+    // 🔥 Successful login
     public void login(String username, String password) {
 
         clickLogin();
@@ -99,11 +117,15 @@ public class LoginModalPage extends BasePage {
 
         clickLoginButton();
 
-        // 🔥 FIXED (no WebElement)
         waitForVisibility(loggedInUser);
     }
 
- // Login failure (alert)
+    // 🔥 Wait for login confirmation (used after register+login)
+    public void waitForUserToBeVisible() {
+        waitForVisibility(loggedInUser);
+    }
+
+    // 🔥 Login failure (with screenshot)
     public String loginAndGetError(String username, String password) {
 
         clickLogin();
@@ -114,17 +136,15 @@ public class LoginModalPage extends BasePage {
 
         clickLoginButton();
 
-        // 📸 TAKE SCREENSHOT IMMEDIATELY AFTER LOGIN CLICK
+        // 📸 Screenshot before alert
         String screenshotPath = ScreenshotUtils.captureScreenshot("LoginFailure");
 
         System.out.println("[INFO] Invalid login attempted");
         System.out.println("[INFO] Screenshot captured: " + screenshotPath);
-        System.out.println("[INFO] Alert is native JS and may not appear in screenshot");
 
         String alertText = "";
 
         try {
-            // Optional alert handling
             wait.until(ExpectedConditions.alertIsPresent());
 
             alertText = driver.switchTo().alert().getText();
@@ -132,6 +152,30 @@ public class LoginModalPage extends BasePage {
 
         } catch (Exception e) {
             System.out.println("[INFO] No alert appeared after login attempt");
+        }
+
+        return alertText;
+    }
+
+    // 🔥 Login with empty username (validation test)
+    public String loginWithEmptyUsername(String password) {
+
+        clickLogin();
+        waitForLoginModal();
+
+        enterLoginUsername("");
+        enterLoginPassword(password);
+
+        clickLoginButton();
+
+        String alertText = "";
+
+        try {
+            wait.until(ExpectedConditions.alertIsPresent());
+            alertText = driver.switchTo().alert().getText();
+            driver.switchTo().alert().accept();
+        } catch (Exception e) {
+            System.out.println("[INFO] No alert appeared for empty login");
         }
 
         return alertText;
@@ -149,8 +193,9 @@ public class LoginModalPage extends BasePage {
             waitForVisibility(loggedInUser);
             waitForVisibility(logoutButton);
 
-            return driver.findElement(loggedInUser).isDisplayed() &&
-                   driver.findElement(logoutButton).isDisplayed();
+            return driver.findElement(loggedInUser).isDisplayed()
+                    && driver.findElement(logoutButton).isDisplayed();
+
         } catch (Exception e) {
             return false;
         }
@@ -158,8 +203,6 @@ public class LoginModalPage extends BasePage {
 
     public void logout() {
         click(logoutButton);
-
-        // 🔥 FIXED
         waitForVisibility(loginLink);
     }
 
@@ -171,26 +214,14 @@ public class LoginModalPage extends BasePage {
             return false;
         }
     }
-    
- // 🔥 NEW METHOD (for CartTest)
-    public String registerUserWithUsername(String username, String password) {
 
-        clickSignUp();
-        waitForSignUpModal();
+    // ================= FORM VALIDATION HELPERS =================
 
-        enterUsername(username);
-        enterPassword(password);
-
-        clickRegister();
-
-        String alertText = getAlertText();
-        waitForAlertAndAccept();
-
-        return alertText;
+    public String getEnteredUsername() {
+        return driver.findElement(usernameInput).getAttribute("value");
     }
-    
- // 🔥 Wait until user appears in navbar (after login)
-    public void waitForUserToBeVisible() {
-        waitForVisibility(loggedInUser);
+
+    public String getEnteredPassword() {
+        return driver.findElement(passwordInput).getAttribute("value");
     }
 }
