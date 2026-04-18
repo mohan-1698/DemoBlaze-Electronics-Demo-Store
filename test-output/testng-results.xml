@@ -1,61 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-18T20:13:05 IST" name="Default suite" finished-at="2026-04-18T20:14:27 IST" duration-ms="82141">
+  <suite started-at="2026-04-18T20:49:22 IST" name="Default suite" finished-at="2026-04-18T20:50:14 IST" duration-ms="51696">
     <groups>
     </groups>
-    <test started-at="2026-04-18T20:13:05 IST" name="Default test" finished-at="2026-04-18T20:14:27 IST" duration-ms="82141">
-      <class name="com.srm.hackathon.demoblaze.tests.CartTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:05 IST" name="setUp" finished-at="2026-04-18T20:13:10 IST" duration-ms="4621" status="PASS">
+    <test started-at="2026-04-18T20:49:22 IST" name="Default test" finished-at="2026-04-18T20:50:14 IST" duration-ms="51696">
+      <class name="com.srm.hackathon.demoblaze.tests.OrderTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:22 IST" name="setUp" finished-at="2026-04-18T20:49:26 IST" duration-ms="3844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAddSingleProduct()[pri:1, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:10 IST" name="verifyAddSingleProduct" finished-at="2026-04-18T20:13:22 IST" duration-ms="12728" status="PASS">
+        <test-method signature="verifyPlaceOrderSuccess()[pri:1, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:26 IST" name="verifyPlaceOrderSuccess" finished-at="2026-04-18T20:49:40 IST" duration-ms="14331" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddSingleProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:22 IST" name="tearDown" finished-at="2026-04-18T20:13:23 IST" duration-ms="313" status="PASS">
+        </test-method> <!-- verifyPlaceOrderSuccess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:40 IST" name="tearDown" finished-at="2026-04-18T20:49:40 IST" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:23 IST" name="setUp" finished-at="2026-04-18T20:13:25 IST" duration-ms="2284" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:40 IST" name="setUp" finished-at="2026-04-18T20:49:42 IST" duration-ms="2083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAddTwoProducts()[pri:2, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:25 IST" name="verifyAddTwoProducts" finished-at="2026-04-18T20:13:45 IST" duration-ms="19712" status="PASS">
+        <test-method signature="verifyOrderIdPresent()[pri:2, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:42 IST" name="verifyOrderIdPresent" finished-at="2026-04-18T20:49:56 IST" duration-ms="13865" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddTwoProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:45 IST" name="tearDown" finished-at="2026-04-18T20:13:45 IST" duration-ms="562" status="PASS">
+        </test-method> <!-- verifyOrderIdPresent -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:56 IST" name="tearDown" finished-at="2026-04-18T20:49:56 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:45 IST" name="setUp" finished-at="2026-04-18T20:13:52 IST" duration-ms="6448" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:56 IST" name="setUp" finished-at="2026-04-18T20:49:59 IST" duration-ms="2385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDeleteProduct()[pri:3, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:13:52 IST" name="verifyDeleteProduct" finished-at="2026-04-18T20:14:06 IST" duration-ms="14629" status="PASS">
+        <test-method signature="verifyEmptyFieldsValidation()[pri:3, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:49:59 IST" name="verifyEmptyFieldsValidation" finished-at="2026-04-18T20:50:12 IST" duration-ms="13005" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDeleteProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:14:06 IST" name="tearDown" finished-at="2026-04-18T20:14:07 IST" duration-ms="263" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:14:07 IST" name="setUp" finished-at="2026-04-18T20:14:09 IST" duration-ms="2349" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyTotalAfterDeletion()[pri:4, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:14:09 IST" name="verifyTotalAfterDeletion" finished-at="2026-04-18T20:14:27 IST" duration-ms="17886" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTotalAfterDeletion -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.CartTest@45752059]" started-at="2026-04-18T20:14:27 IST" name="tearDown" finished-at="2026-04-18T20:14:27 IST" duration-ms="270" status="PASS">
+        </test-method> <!-- verifyEmptyFieldsValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.OrderTest@36ebc363]" started-at="2026-04-18T20:50:12 IST" name="tearDown" finished-at="2026-04-18T20:50:14 IST" duration-ms="1761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.srm.hackathon.demoblaze.tests.CartTest -->
+      </class> <!-- com.srm.hackathon.demoblaze.tests.OrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
