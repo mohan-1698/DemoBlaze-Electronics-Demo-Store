@@ -13,5 +13,13 @@
         </classes>
 
     </test>
+    
+    <test name="Product Tests">
+
+        <classes>
+            <class name="com.srm.hackathon.demoblaze.tests.ProductTest"/>
+        </classes>
+
+    </test>
 
 </suite>

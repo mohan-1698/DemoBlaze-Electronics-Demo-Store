@@ -1,61 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-18T14:45:18 IST" name="DemoBlaze Suite" finished-at="2026-04-18T14:45:33 IST" duration-ms="15547">
+  <suite started-at="2026-04-18T15:02:55 IST" name="DemoBlaze Suite" finished-at="2026-04-18T15:03:25 IST" duration-ms="30144">
     <groups>
     </groups>
-    <test started-at="2026-04-18T14:45:18 IST" name="Auth Tests" finished-at="2026-04-18T14:45:33 IST" duration-ms="15547">
+    <test started-at="2026-04-18T15:02:55 IST" name="Auth Tests" finished-at="2026-04-18T15:03:09 IST" duration-ms="14019">
       <class name="com.srm.hackathon.demoblaze.tests.AuthTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:18 IST" name="setUp" finished-at="2026-04-18T14:45:22 IST" duration-ms="4284" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:02:55 IST" name="setUp" finished-at="2026-04-18T15:02:59 IST" duration-ms="4194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:18 IST" name="setUp" finished-at="2026-04-18T14:45:22 IST" duration-ms="4361" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:02:55 IST" name="setUp" finished-at="2026-04-18T15:02:59 IST" duration-ms="4270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:18 IST" name="setUp" finished-at="2026-04-18T14:45:22 IST" duration-ms="4223" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:02:55 IST" name="setUp" finished-at="2026-04-18T15:02:59 IST" duration-ms="4258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginFailure()[pri:3, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:22 IST" name="verifyLoginFailure" description="Verify login failure with invalid credentials" finished-at="2026-04-18T14:45:26 IST" duration-ms="3532" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailure -->
-        <test-method signature="verifyUserRegistration()[pri:1, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:22 IST" name="verifyUserRegistration" description="Verify successful user registration" finished-at="2026-04-18T14:45:25 IST" duration-ms="2991" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserRegistration -->
-        <test-method signature="verifySuccessfulLogin()[pri:2, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:22 IST" name="verifySuccessfulLogin" description="Verify successful login" finished-at="2026-04-18T14:45:27 IST" duration-ms="4605" status="PASS">
+        <test-method signature="verifySuccessfulLogin()[pri:2, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:02:59 IST" name="verifySuccessfulLogin" description="Verify successful login" finished-at="2026-04-18T15:03:03 IST" duration-ms="3952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessfulLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:25 IST" name="tearDown" finished-at="2026-04-18T14:45:26 IST" duration-ms="569" status="PASS">
+        <test-method signature="verifyUserRegistration()[pri:1, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:02:59 IST" name="verifyUserRegistration" description="Verify successful user registration" finished-at="2026-04-18T15:03:02 IST" duration-ms="2539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserRegistration -->
+        <test-method signature="verifyLoginFailure()[pri:3, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:02:59 IST" name="verifyLoginFailure" description="Verify login failure with invalid credentials" finished-at="2026-04-18T15:03:02 IST" duration-ms="2669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:03:02 IST" name="tearDown" finished-at="2026-04-18T15:03:02 IST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:26 IST" name="tearDown" finished-at="2026-04-18T14:45:26 IST" duration-ms="224" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:03:02 IST" name="tearDown" finished-at="2026-04-18T15:03:02 IST" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:26 IST" name="setUp" finished-at="2026-04-18T14:45:28 IST" duration-ms="2353" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:03:02 IST" name="setUp" finished-at="2026-04-18T15:03:04 IST" duration-ms="2111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:27 IST" name="tearDown" finished-at="2026-04-18T14:45:27 IST" duration-ms="315" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:03:03 IST" name="tearDown" finished-at="2026-04-18T15:03:03 IST" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyLogout()[pri:4, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:28 IST" name="verifyLogout" description="Verify logout functionality" finished-at="2026-04-18T14:45:33 IST" duration-ms="4977" status="PASS">
+        <test-method signature="verifyLogout()[pri:4, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:03:04 IST" name="verifyLogout" description="Verify logout functionality" finished-at="2026-04-18T15:03:09 IST" duration-ms="4707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@6c6cb480]" started-at="2026-04-18T14:45:33 IST" name="tearDown" finished-at="2026-04-18T14:45:33 IST" duration-ms="262" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.AuthTest@3b35a229]" started-at="2026-04-18T15:03:09 IST" name="tearDown" finished-at="2026-04-18T15:03:09 IST" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.srm.hackathon.demoblaze.tests.AuthTest -->
     </test> <!-- Auth Tests -->
+    <test started-at="2026-04-18T15:03:09 IST" name="Product Tests" finished-at="2026-04-18T15:03:25 IST" duration-ms="15845">
+      <class name="com.srm.hackathon.demoblaze.tests.ProductTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:09 IST" name="setUp" finished-at="2026-04-18T15:03:12 IST" duration-ms="2466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:09 IST" name="setUp" finished-at="2026-04-18T15:03:12 IST" duration-ms="2607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:09 IST" name="setUp" finished-at="2026-04-18T15:03:12 IST" duration-ms="3009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLaptopsCategory()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:12 IST" name="verifyLaptopsCategory" finished-at="2026-04-18T15:03:16 IST" duration-ms="4007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLaptopsCategory -->
+        <test-method signature="verifyPhonesCategory()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:12 IST" name="verifyPhonesCategory" finished-at="2026-04-18T15:03:16 IST" duration-ms="3768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPhonesCategory -->
+        <test-method signature="verifyHomeReload()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:12 IST" name="verifyHomeReload" finished-at="2026-04-18T15:03:18 IST" duration-ms="5386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomeReload -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:16 IST" name="tearDown" finished-at="2026-04-18T15:03:16 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:16 IST" name="tearDown" finished-at="2026-04-18T15:03:16 IST" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:16 IST" name="setUp" finished-at="2026-04-18T15:03:18 IST" duration-ms="1986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:18 IST" name="tearDown" finished-at="2026-04-18T15:03:18 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="verifyProductDetails()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:18 IST" name="verifyProductDetails" finished-at="2026-04-18T15:03:25 IST" duration-ms="7085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.demoblaze.tests.ProductTest@471a9022]" started-at="2026-04-18T15:03:25 IST" name="tearDown" finished-at="2026-04-18T15:03:25 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.srm.hackathon.demoblaze.tests.ProductTest -->
+    </test> <!-- Product Tests -->
   </suite> <!-- DemoBlaze Suite -->
 </testng-results>
