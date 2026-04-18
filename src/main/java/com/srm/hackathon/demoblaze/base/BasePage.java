@@ -2,6 +2,7 @@ package com.srm.hackathon.demoblaze.base;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,30 +22,35 @@ public class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     }
 
-    protected void waitForVisibility(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
+    // 🔥 NEW (SAFE for dynamic elements)
+    protected void waitForVisibility(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    protected void waitForClickability(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+    protected void waitForClickability(By locator) {
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    protected void click(WebElement element) {
-        waitForClickability(element);
-        element.click();
+    // 🔥 SAFE click
+    protected void click(By locator) {
+        waitForClickability(locator);
+        driver.findElement(locator).click();
     }
 
-    protected void sendKeys(WebElement element, String value) {
-        waitForVisibility(element);
+    // 🔥 SAFE sendKeys
+    protected void sendKeys(By locator, String value) {
+        waitForVisibility(locator);
+        WebElement element = driver.findElement(locator);
         element.clear();
         element.sendKeys(value);
     }
 
-    protected String getText(WebElement element) {
-        waitForVisibility(element);
-        return element.getText();
+    protected String getText(By locator) {
+        waitForVisibility(locator);
+        return driver.findElement(locator).getText();
     }
 
+    // Alert handling
     protected void waitForAlertAndAccept() {
         wait.until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().accept();
